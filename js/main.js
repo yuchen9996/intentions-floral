@@ -1,4 +1,4 @@
-// Bloom & Co. — Floral Design Studio
+// Rainwood — Floral Design Studio
 // Shared front-end behaviour: mobile nav, active link, gallery filter, contact form.
 
 document.addEventListener('DOMContentLoaded', () => {

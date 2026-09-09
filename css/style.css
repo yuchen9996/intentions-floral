@@ -1,5 +1,5 @@
 /* =========================================================
-   Bloom & Co. — Floral Design Studio
+   Rainwood — Floral Design Studio
    Stylesheet
    ========================================================= */
 
@@ -181,12 +181,13 @@ section {
 
 .nav-links {
   display: flex;
-  gap: 36px;
+  gap: 26px;
   align-items: center;
 }
 
 .nav-links a {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  white-space: nowrap;
   color: var(--color-charcoal);
   position: relative;
   padding: 4px 0;
@@ -415,6 +416,24 @@ section {
   font-style: italic;
 }
 
+.service-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-rose-dark);
+  transition: color var(--transition);
+}
+
+.service-link:hover {
+  color: var(--color-rose);
+}
+
+.section-cta-center {
+  text-align: center;
+  margin-top: 40px;
+}
+
 /* ---------- Gallery ---------- */
 .gallery-grid {
   display: grid;
@@ -457,48 +476,79 @@ section {
   border-color: var(--color-rose);
 }
 
-/* ---------- Testimonials ---------- */
-.testimonials {
+/* ---------- Philosophy / studio blurb ---------- */
+.philosophy {
   background: var(--color-sage);
   color: var(--color-white);
+  text-align: center;
 }
 
-.testimonials .section-header h2,
-.testimonials .eyebrow {
+.philosophy .eyebrow {
   color: var(--color-white);
 }
 
-.testimonials .section-header p {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius);
-  padding: 28px;
-}
-
-.testimonial-card p {
-  font-style: italic;
-  margin-bottom: 18px;
-}
-
-.testimonial-name {
-  font-weight: 500;
+.philosophy-quote {
   font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.6rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.4;
 }
 
-.stars {
-  color: var(--color-gold);
-  margin-bottom: 12px;
-  letter-spacing: 2px;
+.studio-blurb {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.studio-blurb p {
+  font-size: 1.05rem;
+  color: var(--color-charcoal-soft);
+}
+
+/* ---------- Large homepage service tiles ---------- */
+.service-card.large .img-placeholder {
+  height: 260px;
+}
+
+/* ---------- Tag chips (e.g. upcoming offerings) ---------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag-list.centered {
+  justify-content: center;
+}
+
+.tag-chip {
+  background: var(--color-white);
+  border: 1px solid rgba(58, 51, 47, 0.15);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  color: var(--color-charcoal-soft);
+}
+
+/* ---------- Note box (delivery info, pricing notes, etc.) ---------- */
+.note-box {
+  background: var(--color-white);
+  border: 1px solid rgba(58, 51, 47, 0.1);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-top: 28px;
+  font-size: 0.92rem;
+  color: var(--color-charcoal-soft);
+}
+
+.note-box strong {
+  color: var(--color-charcoal);
+}
+
+.note-box p:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- CTA band ---------- */
@@ -517,6 +567,21 @@ section {
   color: rgba(255, 255, 255, 0.75);
   max-width: 520px;
   margin: 0 auto 32px;
+}
+
+.cta-band .hero-actions {
+  justify-content: center;
+  margin-top: 0;
+}
+
+.cta-band .btn-outline {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
+}
+
+.cta-band .btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-charcoal);
 }
 
 /* ---------- Page hero (inner pages) ---------- */
@@ -583,34 +648,45 @@ section {
   margin: 0;
 }
 
-.team-grid {
+.img-placeholder small {
+  display: block;
+  font-size: 0.72rem;
+  font-style: normal;
+  opacity: 0.85;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Weddings & Events category lists ---------- */
+.category-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
 
-.team-card {
-  text-align: center;
+.category-block {
+  background: var(--color-white);
+  border: 1px solid rgba(58, 51, 47, 0.08);
+  border-radius: var(--radius);
+  padding: 32px;
 }
 
-.team-card .img-placeholder {
-  height: 280px;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto 18px;
-  max-width: 220px;
+.category-block h3 {
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+  color: var(--color-rose-dark);
 }
 
-.team-card h3 {
-  margin-bottom: 4px;
-  font-size: 1.1rem;
+.category-block ul li {
+  padding: 7px 0;
+  color: var(--color-charcoal-soft);
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(58, 51, 47, 0.06);
 }
 
-.team-role {
-  color: var(--color-rose);
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  display: block;
+.category-block ul li:last-child {
+  border-bottom: none;
 }
 
 /* ---------- Services page extras ---------- */
@@ -763,6 +839,23 @@ textarea {
   margin-top: 12px;
 }
 
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.checkbox-item input {
+  width: auto;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--color-charcoal);
@@ -772,7 +865,7 @@ textarea {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.3fr 1fr 1.1fr;
   gap: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -865,9 +958,8 @@ textarea {
 
   .intro-strip .container,
   .services-grid,
-  .testimonial-grid,
-  .team-grid,
   .values-grid,
+  .category-grid,
   .process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -881,7 +973,7 @@ textarea {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .nav-links {
     position: fixed;
     top: 66px;
@@ -918,10 +1010,9 @@ textarea {
 
   .gallery-grid,
   .services-grid,
-  .testimonial-grid,
-  .team-grid,
   .intro-strip .container,
   .values-grid,
+  .category-grid,
   .process-steps {
     grid-template-columns: 1fr;
   }
