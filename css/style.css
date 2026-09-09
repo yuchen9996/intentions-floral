@@ -487,6 +487,13 @@ section {
   color: var(--color-white);
 }
 
+.philosophy-intro {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .philosophy-quote {
   font-family: var(--font-heading);
   font-style: italic;
