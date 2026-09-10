@@ -1,4 +1,4 @@
-// Rainwood — Floral Design Studio
+// Intentions — Floral Design Studio
 // Shared front-end behaviour: mobile nav, active link, gallery filter, contact form.
 
 document.addEventListener('DOMContentLoaded', () => {

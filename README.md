@@ -1,6 +1,6 @@
-# Rainwood — Floral Design Studio Website
+# Intentions — Floral Design Studio Website
 
-A static, multi-page marketing website for Rainwood, an independent boutique floral design studio. No build step required — plain HTML, CSS, and JavaScript.
+A static, multi-page marketing website for Intentions, an independent boutique floral design studio. No build step required — plain HTML, CSS, and JavaScript.
 
 ## Structure
 
