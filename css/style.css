@@ -284,19 +284,18 @@ section {
   position: relative;
   height: 420px;
   border-radius: 12px;
-  background: radial-gradient(circle at 30% 30%, var(--color-blush), var(--color-rose) 130%);
+  background: url('../images/sculptural-dahlia-full.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   overflow: hidden;
 }
 
 .hero-visual::before {
-  content: '✿';
+  content: '';
   position: absolute;
-  font-size: 22rem;
-  color: rgba(255, 255, 255, 0.18);
-  transform: rotate(-12deg);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(58, 51, 47, 0) 55%, rgba(58, 51, 47, 0.65) 100%);
 }
 
 .hero-visual span {
@@ -305,9 +304,10 @@ section {
   font-style: italic;
   font-size: 1.3rem;
   color: var(--color-white);
-  background: rgba(58, 51, 47, 0.25);
+  background: rgba(58, 51, 47, 0.35);
   padding: 10px 22px;
   border-radius: 40px;
+  margin-bottom: 28px;
 }
 
 /* ---------- Placeholder image blocks (swap for real photos) ---------- */
