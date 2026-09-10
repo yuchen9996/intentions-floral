@@ -43,7 +43,7 @@
       <div class="container contact-layout">
         <div class="contact-info">
           <h2>Planning something beautiful?</h2>
-          <p>Tell us about your date, venue, and vision and we'll create a custom floral proposal. Ordering a bouquet? The same form works — just note it below.</p>
+          <p>Tell us a bit about your event and we'll be in touch to talk through the details.</p>
 
           <div class="contact-info-item">
             <div class="icon">✉</div>
@@ -78,104 +78,46 @@
         </div>
 
         <div class="contact-form-wrap">
-          <div class="form-success">Thank you! After receiving your inquiry, we'll reach out to learn more about your celebration and prepare a customized floral proposal.</div>
+          <div class="form-success">Thank you! We've received your message and will be in touch soon.</div>
           <form id="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full name *</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+            <div class="form-group">
+              <label>Name (required)</label>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" required>
+                </div>
               </div>
             </div>
             <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email (required)</label>
+                <input type="email" id="email" name="email" required>
+              </div>
               <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone">
               </div>
+            </div>
+            <div class="form-row">
               <div class="form-group">
-                <label for="event-date">Event date</label>
+                <label for="event-date">Event Date</label>
                 <input type="date" id="event-date" name="event-date">
               </div>
-            </div>
-            <div class="form-row">
               <div class="form-group">
-                <label for="venue">Venue / location</label>
-                <input type="text" id="venue" name="venue" placeholder="Venue name or city">
-              </div>
-              <div class="form-group">
-                <label for="guest-count">Estimated guest count</label>
-                <input type="text" id="guest-count" name="guest-count" placeholder="e.g. 80">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="event-type">Event type</label>
-                <select id="event-type" name="event-type">
-                  <option value="">Select an option</option>
-                  <option value="wedding">Wedding</option>
-                  <option value="engagement">Engagement Party</option>
-                  <option value="shower">Bridal / Baby Shower</option>
-                  <option value="birthday">Birthday</option>
-                  <option value="dinner">Private Dinner</option>
-                  <option value="corporate">Corporate Event</option>
-                  <option value="bouquet">Bouquet Order</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="budget">Floral budget</label>
-                <select id="budget" name="budget">
-                  <option value="">Select a range</option>
-                  <option value="under-1000">Under $1,000</option>
-                  <option value="1000-2500">$1,000 – $2,500</option>
-                  <option value="2500-5000">$2,500 – $5,000</option>
-                  <option value="5000-10000">$5,000 – $10,000</option>
-                  <option value="10000-plus">$10,000+</option>
-                  <option value="not-sure">Not sure yet</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="palette">Color palette / style</label>
-                <input type="text" id="palette" name="palette" placeholder="e.g. warm neutrals, romantic garden">
-              </div>
-              <div class="form-group">
-                <label for="inspiration">Inspiration / Pinterest link</label>
-                <input type="url" id="inspiration" name="inspiration" placeholder="Optional">
+                <label for="event-type">Event Type</label>
+                <input type="text" id="event-type" name="event-type" placeholder="e.g. Wedding, Birthday, Bouquet Order">
               </div>
             </div>
             <div class="form-group">
-              <label>Services needed</label>
-              <div class="checkbox-group">
-                <label class="checkbox-item"><input type="checkbox" name="services" value="personal">Bridal &amp; Personal Flowers</label>
-                <label class="checkbox-item"><input type="checkbox" name="services" value="ceremony">Ceremony Florals</label>
-                <label class="checkbox-item"><input type="checkbox" name="services" value="reception">Reception Florals</label>
-                <label class="checkbox-item"><input type="checkbox" name="services" value="installation">Event Installation</label>
-                <label class="checkbox-item"><input type="checkbox" name="services" value="bouquet">Bouquet Order</label>
-                <label class="checkbox-item"><input type="checkbox" name="services" value="other">Other</label>
-              </div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your event or what you're looking for."></textarea>
             </div>
-            <div class="form-group">
-              <label for="referral">How did you hear about us?</label>
-              <select id="referral" name="referral">
-                <option value="">Select an option</option>
-                <option value="instagram">Instagram</option>
-                <option value="pinterest">Pinterest</option>
-                <option value="google">Google Search</option>
-                <option value="friend">Referral from a friend</option>
-                <option value="vendor">Venue / Vendor referral</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Tell us about your event *</label>
-              <textarea id="message" name="message" required placeholder="Share anything else that helps us understand your vision."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <p class="form-note">This form is front-end only for now — connect it to a service like Formspree or Netlify Forms to receive submissions by email.</p>
           </form>
         </div>
