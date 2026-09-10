@@ -8,7 +8,7 @@ A static, multi-page marketing website for Intentions, an independent boutique f
 floral-design-studio/
 ├── index.html              Home page — hero, service categories, selected work, philosophy
 ├── weddings-events.html    Personal flowers, ceremony, reception, and event categories, process, FAQ
-├── bouquets.html            Seasonal bouquet tiers, delivery info, upcoming offerings
+├── bouquets.html            Bouquet tiers, delivery info, upcoming offerings
 ├── portfolio.html           Editorial "Selected Work" gallery with category filtering
 ├── about.html                Studio story and design philosophy
 ├── inquire.html              Detailed inquiry form (weddings/events/bouquets) and studio info
@@ -24,7 +24,7 @@ The site is intentionally built for a new, small studio rather than one with yea
 - Navigation: **Home | Weddings & Events | Bouquets | Portfolio | About | Inquire**
 - No fabricated client counts, testimonials, or "years in business" claims
 - Weddings & Events lists what's offered (personal flowers, ceremony, reception, other events) even before every category has portfolio photos
-- Bouquets starts with 3 simple, seasonal "designer's choice" tiers rather than a large product catalog
+- Bouquets starts with 3 simple, artfully composed tiers rather than a large product catalog
 - Portfolio is framed as "Selected Work" / studio floral studies — a small set of real, well-photographed pieces (each shown from multiple angles) reads as more credible than many empty categories
 - About leans on the founder's story, curiosity, and design philosophy rather than experience claims
 - Inquire collects the details a florist actually needs for a wedding/event quote (date, venue, guest count, budget range, palette, services needed, inspiration link, referral source)
