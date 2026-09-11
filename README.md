@@ -6,28 +6,38 @@ A static, multi-page marketing website for Intentions, an independent boutique f
 
 ```
 floral-design-studio/
-├── index.html              Home page — hero, service categories, selected work, philosophy
-├── weddings-events.html    Personal flowers, ceremony, reception, and event categories, process, FAQ
-├── bouquets.html            Bouquet tiers, delivery info, upcoming offerings
-├── portfolio.html           Editorial "Selected Work" gallery with category filtering
-├── about.html                Studio story and design philosophy
-├── inquire.html              Detailed inquiry form (weddings/events/bouquets) and studio info
-├── css/style.css             All styling (CSS variables for easy re-theming)
-├── js/main.js                 Mobile nav, active-link highlighting, gallery filter, form handling
-└── images/                    Drop real photography here
+├── index.html                Home page — editorial hero, service categories, selected work, philosophy
+├── shop.html                 Shop hub — links to the four Shop sub-pages
+├── bouquets.html              Hand-tied bouquet tiers
+├── vase-arrangements.html     Ready-to-display vase arrangement tiers
+├── designers-choice.html      Budget-tier "let the designer choose" arrangements
+├── subscriptions.html         Recurring florals — lobby flowers and home decor
+├── weddings.html              Full-service wedding floral categories, process, FAQ
+├── events.html                Event types (engagement parties, showers, corporate, etc.), process, FAQ
+├── portfolio.html             Editorial "Selected Work" masonry gallery
+├── about.html                 Studio story and design philosophy
+├── contact.html                Detailed inquiry form and studio info
+├── css/style.css               All styling (CSS variables for easy re-theming)
+├── js/main.js                   Mobile nav, active-link highlighting, gallery filter, form handling
+└── images/                      Real photography lives here; images/originals/ holds raw uploads (gitignored)
 ```
+
+## Navigation
+
+**Home | Shop ▾ (Bouquets, Vase Arrangements, Designer's Choice, Subscriptions) | Weddings | Events | Portfolio | About | Contact**
+
+The Shop item is a hover dropdown on desktop; on mobile it expands inline (no extra tap needed) via CSS only — see `.has-dropdown` / `.dropdown-menu` in `css/style.css`.
 
 ## Site structure & positioning
 
-The site is intentionally built for a new, small studio rather than one with years of history:
+The site is intentionally built for a new, small, design-led studio rather than one leaning on years of history or a "seasonal local flower shop" feel:
 
-- Navigation: **Home | Weddings & Events | Bouquets | Portfolio | About | Inquire**
 - No fabricated client counts, testimonials, or "years in business" claims
-- Weddings & Events lists what's offered (personal flowers, ceremony, reception, other events) even before every category has portfolio photos
-- Bouquets starts with 3 simple, artfully composed tiers rather than a large product catalog
-- Portfolio is framed as "Selected Work" / studio floral studies — a small set of real, well-photographed pieces (each shown from multiple angles) reads as more credible than many empty categories
+- Weddings and Events are separate pages so each can speak directly to its own audience; Weddings leads with a full-bleed portfolio photo (`.photo-hero`)
+- Shop splits offerings into four distinct products (Bouquets, Vase Arrangements, Designer's Choice, Subscriptions) rather than one crowded page
+- Portfolio is framed as "Selected Work" — a small set of real, well-photographed pieces (each shown from multiple angles, and deliberately interleaved by background/setting) reads as more credible than many empty categories
 - About leans on the founder's story, curiosity, and design philosophy rather than experience claims
-- Inquire collects the details a florist actually needs for a wedding/event quote (date, venue, guest count, budget range, palette, services needed, inspiration link, referral source)
+- Contact collects the details a florist actually needs for a wedding/event quote (date, venue, event type, message)
 
 ## Running locally
 
@@ -41,8 +51,8 @@ npx serve .
 
 - **Brand name / colors / fonts**: edit the CSS variables at the top of `css/style.css` (`--color-*`, `--font-*`).
 - **Copy**: edit the HTML files directly — content is plain markup, no templating.
-- **Photos**: replace the `.img-placeholder` blocks with real `<img>` tags pointing to files in `images/`. For the portfolio page, aim for a small number of genuinely strong pieces shot from multiple angles (full arrangement, detail, styled) rather than many thin categories.
-- **Inquiry form**: the form in `inquire.html` is front-end only (it just shows a success message). To receive real submissions, point the `<form>` at a service like [Formspree](https://formspree.io) or enable [Netlify Forms](https://docs.netlify.com/forms/setup/) by adding a `netlify` attribute, or wire up your own backend endpoint.
+- **Photos**: replace the `.img-placeholder` blocks with real `<img>` tags pointing to files in `images/`. For the portfolio page, aim for a small number of genuinely strong pieces shot from multiple angles (full arrangement, detail, styled) rather than many thin categories, and keep the gallery order blended by background/setting rather than grouped by piece.
+- **Contact form**: the form in `contact.html` is front-end only (it just shows a success message). To receive real submissions, point the `<form>` at a service like [Formspree](https://formspree.io) or enable [Netlify Forms](https://docs.netlify.com/forms/setup/) by adding a `netlify` attribute, or wire up your own backend endpoint.
 
 ## Deploying
 
