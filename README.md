@@ -28,6 +28,12 @@ floral-design-studio/
 
 The Shop item is a hover dropdown on desktop; on mobile it expands inline (no extra tap needed) via CSS only — see `.has-dropdown` / `.dropdown-menu` in `css/style.css`.
 
+## Design system
+
+Minimal-gallery layout with a warm neutral palette: ivory/sand backgrounds, terracotta accent, olive and ink neutrals. Headings use Cormorant Garamond (light weights), body uses Jost. All colors live in the `:root` variables at the top of `css/style.css`.
+
+The Shop page includes a "Shop by Occasion" collection grid (`.collection-grid` / `.collection-tile`): photo tiles with a centered label. Each tile links to `contact.html?occasion=<name>`, and `js/main.js` prefills the Event Type field with it. To add an occasion, copy a tile in `shop.html` and change the image, label, and `occasion` query value.
+
 ## Site structure & positioning
 
 The site is intentionally built for a new, small, design-led studio rather than one leaning on years of history or a "seasonal local flower shop" feel:

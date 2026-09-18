@@ -57,6 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.querySelector('.form-success');
 
   if (contactForm) {
+    const occasion = new URLSearchParams(window.location.search).get('occasion');
+    const eventType = document.getElementById('event-type');
+    if (occasion && eventType) {
+      eventType.value = 'Bouquet: ' + occasion;
+    }
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
