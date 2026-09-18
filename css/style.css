@@ -79,13 +79,13 @@ p {
 }
 
 section {
-  padding: 112px 0;
+  padding: 72px 0;
 }
 
 .section-header {
   text-align: center;
-  max-width: 620px;
-  margin: 0 auto 64px;
+  max-width: 660px;
+  margin: 0 auto 40px;
 }
 
 .eyebrow {
@@ -95,18 +95,20 @@ section {
   text-transform: uppercase;
   font-size: 0.7rem;
   color: var(--color-terracotta);
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   font-weight: 400;
 }
 
 .section-header h2 {
-  font-size: 2.9rem;
+  font-size: 2.1rem;
   font-weight: 300;
+  margin-bottom: 0.3em;
 }
 
 .section-header p {
   color: var(--color-ink-soft);
-  margin-top: 14px;
+  font-size: 0.95rem;
+  margin: 8px 0 0;
 }
 
 /* ---------- Buttons ---------- */
@@ -336,7 +338,7 @@ section {
 /* ---------- Photo hero (weddings) ---------- */
 .photo-hero {
   position: relative;
-  min-height: 560px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -365,7 +367,7 @@ section {
 
 .photo-hero h1 {
   color: var(--color-paper);
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   font-weight: 300;
   margin-bottom: 8px;
 }
@@ -381,15 +383,15 @@ section {
 /* ---------- Hero (home) ---------- */
 .hero {
   position: relative;
-  padding: 88px 0 104px;
+  padding: 40px 0 56px;
   background: var(--color-ivory);
   overflow: hidden;
 }
 
 .hero .container {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 72px;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 56px;
   align-items: center;
 }
 
@@ -398,10 +400,10 @@ section {
 }
 
 .hero h1 {
-  font-size: 4.6rem;
+  font-size: 3rem;
   font-weight: 300;
-  line-height: 1.05;
-  margin-bottom: 0.4em;
+  line-height: 1.08;
+  margin-bottom: 0.35em;
 }
 
 .hero h1 em {
@@ -410,21 +412,23 @@ section {
 }
 
 .hero p {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--color-ink-soft);
-  max-width: 400px;
+  max-width: 340px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 16px;
-  margin-top: 36px;
+  gap: 12px;
+  margin-top: 26px;
   flex-wrap: wrap;
 }
 
 .hero-visual {
   position: relative;
-  height: 600px;
+  height: calc(100vh - 180px);
+  min-height: 420px;
+  max-height: 720px;
   background: url('../images/sculptural-dahlia-full.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
@@ -539,7 +543,11 @@ section {
 }
 
 .service-card-body {
-  padding: 26px 0 0;
+  padding: 20px 0 0;
+}
+
+.bouquet-tiers .card-media {
+  aspect-ratio: 4 / 3;
 }
 
 .service-card h3 {
@@ -582,7 +590,7 @@ section {
 
 .section-cta-center {
   text-align: center;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 /* Photo tile used inside service cards */
@@ -782,7 +790,7 @@ section {
   background: var(--color-paper);
   border-left: 2px solid var(--color-terracotta);
   padding: 24px 30px;
-  margin-top: 40px;
+  margin-top: 32px;
   font-size: 0.95rem;
   color: var(--color-ink-soft);
 }
@@ -804,14 +812,14 @@ section {
 }
 
 .cta-band h2 {
-  font-size: 2.9rem;
+  font-size: 2.2rem;
   font-weight: 300;
 }
 
 .cta-band p {
   color: var(--color-ink-soft);
   max-width: 520px;
-  margin: 0 auto 36px;
+  margin: 0 auto 28px;
 }
 
 .cta-band .hero-actions {
@@ -822,7 +830,7 @@ section {
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero {
   background: var(--color-ivory);
-  padding: 104px 0 80px;
+  padding: 44px 0 36px;
   text-align: center;
   border-bottom: 1px solid var(--color-line);
 }
@@ -831,10 +839,14 @@ section {
   color: var(--color-terracotta);
 }
 
+.page-hero .eyebrow {
+  margin-bottom: 6px;
+}
+
 .page-hero h1 {
-  font-size: 3.8rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .breadcrumb {
@@ -1304,17 +1316,17 @@ textarea {
   }
 
   .page-hero {
-    padding: 72px 0 56px;
+    padding: 36px 0 28px;
   }
 
   .page-hero h1,
   .photo-hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.1rem;
   }
 
   .section-header h2,
   .cta-band h2 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }
 
   .philosophy-quote {
@@ -1357,6 +1369,6 @@ textarea {
   }
 
   section {
-    padding: 72px 0;
+    padding: 48px 0;
   }
 }
