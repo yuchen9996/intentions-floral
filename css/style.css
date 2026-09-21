@@ -1019,6 +1019,14 @@ section {
   font-weight: 400;
 }
 
+.rate-note {
+  margin-top: 20px;
+}
+
+.faq-item a {
+  border-bottom: 1px solid currentColor;
+}
+
 .contact-section + .faq {
   border-top: 1px solid var(--color-line);
 }
