@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const occasion = new URLSearchParams(window.location.search).get('occasion');
     const eventType = document.getElementById('event-type');
     if (occasion && eventType) {
-      eventType.value = 'Bouquet: ' + occasion;
+      eventType.value = 'Order: ' + occasion;
     }
 
     contactForm.addEventListener('submit', (e) => {
