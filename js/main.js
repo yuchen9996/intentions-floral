@@ -1,7 +1,31 @@
 // Intentions — Floral Design Studio
 // Shared front-end behaviour: mobile nav, active link, gallery filter, contact form.
 
+// Square store links for the "Order" buttons. Set SQUARE_STORE_URL to your store address
+// (e.g. 'https://shop.intentionsfloral.com'), and optionally give an item its own link
+// in ORDER_LINKS. Any button left without a link falls back to the Contact page.
+const SQUARE_STORE_URL = '';
+const ORDER_LINKS = {
+  'petite-bouquet': '',
+  'signature-bouquet': '',
+  'grand-bouquet': '',
+  'petite-vase': '',
+  'signature-vase': '',
+  'grand-vase': '',
+  'designers-choice-75': '',
+  'designers-choice-150': '',
+  'designers-choice-250': ''
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  /* Order buttons -> Square store */
+  document.querySelectorAll('[data-order]').forEach((btn) => {
+    const url = ORDER_LINKS[btn.dataset.order] || SQUARE_STORE_URL;
+    if (url) {
+      btn.href = url;
+    }
+  });
+
   /* Mobile nav toggle */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
