@@ -613,14 +613,16 @@ section {
 
 /* ---------- Collection tiles (shop by occasion) ---------- */
 .collection-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 
 .collection-tile {
   position: relative;
   display: block;
+  flex: 0 0 calc((100% - 72px) / 4);
   aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--color-sand);
@@ -1240,8 +1242,8 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .collection-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .collection-tile {
+    flex-basis: calc((100% - 24px) / 2);
   }
 
   .gallery-grid {
@@ -1348,6 +1350,10 @@ textarea {
 
   .collection-grid {
     gap: 12px;
+  }
+
+  .collection-tile {
+    flex-basis: calc((100% - 12px) / 2);
   }
 
   .collection-tile span {
