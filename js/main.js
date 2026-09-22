@@ -10,7 +10,7 @@ const ORDER_LINKS = {
   'signature-bouquet': '',
   'grand-bouquet': '',
   'petite-vase': '',
-  'signature-vase': '',
+  'signature-vase': 'https://square.link/u/GZQKEHPI',
   'grand-vase': '',
   'designers-choice-75': '',
   'designers-choice-150': '',
@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = ORDER_LINKS[btn.dataset.order] || SQUARE_STORE_URL;
     if (url) {
       btn.href = url;
+      btn.target = '_blank';
+      btn.rel = 'noopener';
     }
   });
 
