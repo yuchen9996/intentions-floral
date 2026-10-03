@@ -548,7 +548,7 @@ section {
   padding: 20px 0 0;
 }
 
-.bouquet-tiers .bouquet-tiers .service-card {
+.bouquet-tiers .service-card {
   display: flex;
   flex-direction: column;
 }
@@ -570,8 +570,8 @@ section {
   padding: 14px 24px;
 }
 
-.card-media {
-  aspect-ratio: 4 / 3;
+.bouquet-tiers .card-media {
+  aspect-ratio: 1 / 1;
 }
 
 .service-card h3 {
