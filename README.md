@@ -30,7 +30,7 @@ The Shop item is a hover dropdown on desktop; on mobile it expands inline (no ex
 
 ## Design system
 
-Minimal-gallery layout with a warm neutral palette: ivory/sand backgrounds, terracotta accent, olive and ink neutrals. Headings use Cormorant Garamond (light weights), body uses Jost. All colors live in the `:root` variables at the top of `css/style.css`.
+Clean white layout matching the Square store: rounded photos and fields, pill buttons, left-aligned headings, and a swipeable photo row on Events. Headings use Inter (clean sans-serif). All colors live in the `:root` variables at the top of `css/style.css`.
 
 The Shop page includes a "Shop by Occasion" collection grid (`.collection-grid` / `.collection-tile`): photo tiles with a centered label. Each tile links to `contact.html?occasion=<name>`, and `js/main.js` prefills the Event Type field with it. To add an occasion, copy a tile in `shop.html` and change the image, label, and `occasion` query value.
 

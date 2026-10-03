@@ -28,6 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* Photo carousel arrows */
+  document.querySelectorAll('.event-feature').forEach((section) => {
+    const track = section.querySelector('.carousel-track');
+    section.querySelectorAll('[data-carousel]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const dir = btn.dataset.carousel === 'next' ? 1 : -1;
+        track.scrollBy({ left: dir * track.clientWidth * 0.8, behavior: 'smooth' });
+      });
+    });
+  });
+
   /* Mobile nav toggle */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
