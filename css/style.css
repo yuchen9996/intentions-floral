@@ -1742,3 +1742,7 @@ details.faq-item > ul { margin-bottom: 24px; }
   .logo img { height: 72px; width: auto; }
   .footer-logo img { height: 110px; width: auto; }
 }
+
+/* Subscriptions: square photos so the flowers fill the frame */
+.services-grid.two-up .card-media { aspect-ratio: 1 / 1; }
+.services-grid.two-up .card-media img { object-position: 45% 50%; }
