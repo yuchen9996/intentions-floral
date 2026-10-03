@@ -431,7 +431,7 @@ section {
   height: calc(100vh - 180px);
   min-height: 420px;
   max-height: 720px;
-  background: url('../images/sculptural-dahlia-full.jpg') center/cover no-repeat;
+  background: url('../images/arrangements/sculptural-dahlia-full.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -1624,6 +1624,9 @@ input:focus, select:focus, textarea:focus {
 
 /* Floating "Text us" button */
 .text-us {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -1639,3 +1642,98 @@ input:focus, select:focus, textarea:focus {
 }
 
 .text-us:hover { background: var(--color-ink); color: var(--color-white); }
+
+/* Events page: hero card, highlights, accordion FAQ */
+.event-hero { padding: 28px 0 0; }
+
+.event-hero-photo {
+  height: 460px;
+  border-radius: var(--radius-img);
+  background-size: cover;
+  background-position: center;
+}
+
+.event-hero-card {
+  position: relative;
+  max-width: 820px;
+  margin: -96px auto 0;
+  padding: 40px 44px;
+  background: var(--color-paper);
+  border-radius: var(--radius-img);
+  box-shadow: 0 14px 44px rgba(43, 37, 33, 0.12);
+}
+
+.event-hero-card h1 { font-size: 2.6rem; margin-bottom: 12px; }
+.event-hero-card p { color: var(--color-ink-soft); margin-bottom: 22px; }
+.event-hero-card .eyebrow { margin-bottom: 8px; }
+
+.highlight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.highlight:last-child { margin-bottom: 0; }
+.highlight:nth-of-type(even) .highlight-media { order: 2; }
+
+.highlight-media {
+  border-radius: var(--radius-img);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--color-sand);
+}
+
+.highlight-media img { width: 100%; height: 100%; object-fit: cover; }
+
+.highlight-copy h3 { font-size: 2.1rem; margin-bottom: 12px; }
+.highlight-copy p { color: var(--color-ink-soft); }
+
+.highlight-price {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--color-ink) !important;
+  margin-top: 8px;
+}
+
+details.faq-item { padding: 0; }
+
+details.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+details.faq-item summary::-webkit-details-marker { display: none; }
+
+details.faq-item summary::after {
+  content: '+';
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+details.faq-item[open] summary::after { content: '\2212'; }
+
+details.faq-item > p,
+details.faq-item > ul { margin-bottom: 24px; }
+
+@media (max-width: 860px) {
+  .event-hero-photo { height: 300px; }
+  .event-hero-card { margin-top: -56px; padding: 26px 22px; }
+  .event-hero-card h1 { font-size: 2rem; }
+  .highlight { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+  .highlight:nth-of-type(even) .highlight-media { order: 0; }
+  .highlight-copy h3 { font-size: 1.7rem; }
+}

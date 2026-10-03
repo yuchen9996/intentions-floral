@@ -63,3 +63,11 @@ npx serve .
 ## Deploying
 
 Any static host works — Netlify, Vercel, GitHub Pages, or Cloudflare Pages. Drag-and-drop the folder or connect the git repo; no build command is needed.
+
+
+## Image folders
+
+- `images/events/<event-name>/` — one folder per event; the newest is featured at the top of events.html
+- `images/arrangements/` — web-ready arrangement and bouquet photos
+- `images/brand/` — logo
+- `images/originals/` — raw uploads (gitignored)

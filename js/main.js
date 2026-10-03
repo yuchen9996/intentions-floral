@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const textUs = document.createElement('a');
   textUs.className = 'text-us';
   textUs.href = 'sms:+14134618023';
-  textUs.textContent = 'Text us';
+  textUs.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.6-.8L3 21l1.9-5.1A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.5 10.5h7M8.5 13.5h4"/></svg><span>Text us</span>';
   textUs.setAttribute('aria-label', 'Text us at (413) 461-8023');
   document.body.appendChild(textUs);
 
