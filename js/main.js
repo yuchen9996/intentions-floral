@@ -28,6 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* Floating "Text us" button */
+  const textUs = document.createElement('a');
+  textUs.className = 'text-us';
+  textUs.href = 'sms:+14134618023';
+  textUs.textContent = 'Text us';
+  textUs.setAttribute('aria-label', 'Text us at (413) 461-8023');
+  document.body.appendChild(textUs);
+
   /* Photo carousel arrows */
   document.querySelectorAll('.event-feature').forEach((section) => {
     const track = section.querySelector('.carousel-track');
