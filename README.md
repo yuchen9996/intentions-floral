@@ -19,7 +19,15 @@ floral-design-studio/
 ├── contact.html                Detailed inquiry form and studio info
 ├── css/style.css               All styling (CSS variables for easy re-theming)
 ├── js/main.js                   Mobile nav, active-link highlighting, gallery filter, form handling
-└── images/                      Real photography lives here; images/originals/ holds raw uploads (gitignored)
+└── images/
+    ├── inbox/                   Drop new raw photos here (not published); tell Claude where each belongs
+    ├── events/<event-name>/     One folder per event (e.g. events/oda-house); newest featured on events.html
+    ├── weddings/                Wedding photos
+    ├── shop/                    bouquets/, vase-arrangements/, designers-choice/, subscriptions/ (lobby flowers, home decor)
+    ├── portfolio/               Extra portfolio photos
+    ├── arrangements/            Earlier web-ready arrangement photos
+    ├── brand/                   Logo
+    └── originals/               Raw originals (gitignored)
 ```
 
 ## Navigation
@@ -64,10 +72,8 @@ npx serve .
 
 Any static host works — Netlify, Vercel, GitHub Pages, or Cloudflare Pages. Drag-and-drop the folder or connect the git repo; no build command is needed.
 
+## Adding photos
 
-## Image folders
-
-- `images/events/<event-name>/` — one folder per event; the newest is featured at the top of events.html
-- `images/arrangements/` — web-ready arrangement and bouquet photos
-- `images/brand/` — logo
-- `images/originals/` — raw uploads (gitignored)
+1. Drop raw photos into `images/inbox/` (or straight into a category folder).
+2. Resize to about 1800px on the long side, JPEG quality ~82, and name files `subject-description.jpg`, for example `lobby-flowers-entry-full.jpg`.
+3. Reference them from the page with the full path, for example `images/shop/subscriptions/lobby-flowers-entry-full.jpg`.
