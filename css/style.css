@@ -4,22 +4,22 @@
    ========================================================= */
 
 :root {
-  --color-ivory: #ffffff;
-  --color-paper: #ffffff;
-  --color-sand: #f4f4f2;
-  --color-sand-dark: #e6e6e3;
-  --color-terracotta: #1a1a1a;
-  --color-terracotta-dark: #000000;
-  --color-terracotta-light: #d0d0d0;
+  --color-ivory: #f8f4ec;
+  --color-paper: #fdfbf7;
+  --color-sand: #efe6d8;
+  --color-sand-dark: #e0d3c0;
+  --color-terracotta: #a44f33;
+  --color-terracotta-dark: #843c25;
+  --color-terracotta-light: #d79273;
   --color-olive: #6c7052;
   --color-olive-dark: #4f533b;
-  --color-ink: #141414;
-  --color-ink-soft: #5c5c5c;
+  --color-ink: #2b2521;
+  --color-ink-soft: #6b6058;
   --color-white: #ffffff;
-  --color-line: rgba(20, 20, 20, 0.14);
+  --color-line: rgba(43, 37, 33, 0.14);
 
-  --font-heading: 'Inter', 'Segoe UI', Arial, sans-serif;
-  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Jost', 'Segoe UI', Arial, sans-serif;
 
   --max-width: 1240px;
   --radius-img: 14px;
@@ -162,7 +162,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(248, 244, 236, 0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-line);
 }
@@ -1447,17 +1447,12 @@ textarea {
 
 
 /* =========================================================
-   Square-store look: white, Inter, rounded, left-aligned
+   Blended look: warm ivory + terracotta, serif headings,
+   rounded photos/fields, pill buttons, left-aligned headings
    ========================================================= */
-body { font-weight: 400; line-height: 1.6; }
+body { font-weight: 300; line-height: 1.7; }
 
-h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.015em; }
-
-.eyebrow {
-  letter-spacing: 0.08em;
-  font-weight: 500;
-  color: var(--color-ink-soft);
-}
+h1, h2, h3, h4 { font-weight: 500; letter-spacing: 0; }
 
 .section-header h2,
 .cta-band h2,
@@ -1478,47 +1473,25 @@ h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.015em; }
 
 .page-hero { border-bottom: none; }
 
-.breadcrumb { letter-spacing: 0.04em; text-transform: none; font-size: 0.85rem; }
-
 /* Header and navigation */
 .nav { padding: 14px 32px; }
 
 .logo img { height: 56px; width: 56px; }
 
-.nav-links a {
-  font-size: 0.95rem;
-  letter-spacing: 0;
-  text-transform: none;
-  font-weight: 400;
-}
-
 .nav-links a.nav-cta {
   border-radius: 999px;
-  background: var(--color-ink);
-  border-color: var(--color-ink);
-  color: var(--color-white);
-  padding: 10px 24px;
+  padding: 10px 26px;
 }
-
-.nav-links a.nav-cta:hover,
-.nav-links a.nav-cta.active { background: #3a3a3a; border-color: #3a3a3a; color: var(--color-white); }
 
 .dropdown-menu { border-radius: 12px; }
 
 /* Buttons: pills */
 .btn {
   border-radius: 999px;
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 14px 30px;
+  padding: 15px 34px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
 }
-
-.btn-primary:hover,
-.btn-dark:hover { background: #3a3a3a; }
-
-.btn-outline { border-color: rgba(20, 20, 20, 0.5); }
 
 /* Rounded photos */
 .card-media,
@@ -1530,88 +1503,69 @@ h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.015em; }
 
 .photo-hero { margin: 0 24px; }
 
-.collection-tile span {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  font-weight: 500;
-  border-radius: 8px;
-  letter-spacing: 0;
-}
+.collection-tile span { border-radius: 8px; }
 
-.hero h1 em { font-style: normal; color: var(--color-ink-soft); }
-
-.hero-visual span { font-family: var(--font-body); font-style: normal; font-size: 1.05rem; font-weight: 500; }
-
-.service-link { letter-spacing: 0; text-transform: none; font-size: 0.95rem; font-weight: 500; }
-
-.service-price { font-family: var(--font-body); font-style: normal; font-weight: 500; font-size: 1.05rem; color: var(--color-ink); }
-
-.tag-chip, .filter-btn { border-radius: 999px; letter-spacing: 0; text-transform: none; font-size: 0.9rem; }
+.tag-chip, .filter-btn { border-radius: 999px; }
 
 .note-box { border-left: none; background: var(--color-sand); border-radius: var(--radius-img); }
 
-.category-block { border-top: 1px solid var(--color-line); }
-
-.process-step .step-number { font-family: var(--font-body); font-weight: 500; border-color: var(--color-ink); color: var(--color-ink); }
-
-/* Dark bands become soft grey */
 .philosophy,
 .cta-band { background: var(--color-sand); color: var(--color-ink); }
 
-.philosophy .eyebrow { color: var(--color-ink-soft); }
+.philosophy .eyebrow { color: var(--color-terracotta); }
 .philosophy-intro { color: var(--color-ink-soft); }
-.philosophy-quote { font-style: normal; font-weight: 500; letter-spacing: -0.01em; }
+.philosophy-quote { font-weight: 400; }
 
 .philosophy .btn-dark {
   background: var(--color-ink);
   border-color: var(--color-ink);
-  color: var(--color-white);
+  color: var(--color-paper);
 }
 
-.philosophy .btn-dark:hover { background: #3a3a3a; color: var(--color-white); }
+.philosophy .btn-dark:hover { background: var(--color-terracotta); color: var(--color-paper); }
 
 .cta-band h2 { color: var(--color-ink); }
 .cta-band p { color: var(--color-ink-soft); }
 
-/* Forms: big rounded fields */
+/* Forms: roomy rounded fields */
 .form-group label {
-  font-size: 0.9rem;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--color-ink);
-  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  font-weight: 400;
   margin-bottom: 6px;
 }
 
 input, select, textarea {
   padding: 14px 16px;
-  border: 1px solid rgba(20, 20, 20, 0.35);
+  border: 1px solid rgba(43, 37, 33, 0.3);
   border-radius: var(--radius-field);
-  background: var(--color-white);
-  font-weight: 400;
+  background: var(--color-paper);
+  font-weight: 300;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: var(--color-ink);
-  box-shadow: 0 0 0 3px rgba(20, 20, 20, 0.08);
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 3px rgba(164, 79, 51, 0.12);
 }
 
 .form-success { border-radius: var(--radius-field); }
 
-/* Footer: light */
+/* Footer: light so the logo reads clearly */
 .site-footer {
-  background: var(--color-white);
+  background: var(--color-paper);
   color: var(--color-ink-soft);
   border-top: 1px solid var(--color-line);
 }
 
 .footer-grid { border-bottom-color: var(--color-line); }
 .footer-logo img { height: 72px; width: 72px; }
-.footer-col h4 { color: var(--color-ink); font-size: 0.85rem; letter-spacing: 0.08em; font-weight: 600; }
+.footer-col h4 { color: var(--color-ink); }
 .footer-col a { color: var(--color-ink-soft); }
-.footer-col a:hover { color: var(--color-ink); }
-.social-links a { border-color: rgba(20, 20, 20, 0.3); color: var(--color-ink); }
-.social-links a:hover { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+.footer-col a:hover { color: var(--color-terracotta); }
+.social-links a { border-color: rgba(43, 37, 33, 0.3); color: var(--color-ink); }
+.social-links a:hover { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-paper); }
 .footer-bottom a { color: var(--color-ink-soft); }
 
 /* Swipeable photo row (events) */
@@ -1631,15 +1585,15 @@ input:focus, select:focus, textarea:focus {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(20, 20, 20, 0.35);
-  background: var(--color-white);
+  border: 1px solid rgba(43, 37, 33, 0.35);
+  background: var(--color-paper);
   color: var(--color-ink);
   font-size: 1.1rem;
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
 }
 
-.carousel-btn:hover { background: var(--color-ink); color: var(--color-white); }
+.carousel-btn:hover { background: var(--color-ink); color: var(--color-paper); }
 
 .carousel-track {
   display: flex;
@@ -1676,9 +1630,9 @@ input:focus, select:focus, textarea:focus {
   z-index: 900;
   padding: 14px 24px;
   border-radius: 999px;
-  background: var(--color-white);
+  background: var(--color-paper);
   color: var(--color-ink);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.95rem;
   box-shadow: 0 6px 24px rgba(20, 20, 20, 0.18);
   transition: background var(--transition), color var(--transition);
