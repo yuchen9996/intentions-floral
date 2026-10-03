@@ -3,3 +3,6 @@ Thumbs.db
 node_modules/
 .vscode/
 images/originals/
+
+images/inbox/*
+!images/inbox/.gitkeep
