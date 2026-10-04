@@ -45,27 +45,33 @@ function createWeddingInquiryForm() {
   form.addMultipleChoiceItem().setTitle('What is your ceremony style?')
     .setChoiceValues(['Courthouse', 'Outdoor', 'Venue', 'Backyard'])
     .showOtherOption(true);
-  form.addCheckboxItem().setTitle('Which flowers do you need?')
-    .setChoiceValues([
+  form.addGridItem()
+    .setTitle('Which flowers do you need, and how many of each?')
+    .setHelpText('Choose 0 for anything you do not need.')
+    .setRows([
       'Bridal bouquet', 'Bridesmaid bouquets', 'Boutonniere(s)', 'Corsage(s)',
-      'Ceremony arrangement', 'A few table pieces'
+      'Ceremony arrangement', 'Table pieces'
     ])
-    .showOtherOption(true);
-  form.addParagraphTextItem().setTitle('How many of each?');
+    .setColumns(['0', '1', '2', '3', '4', '5', '6+']);
+  form.addParagraphTextItem()
+    .setTitle('Anything else you need? Please list the item and quantity.');
   form.addMultipleChoiceItem().setTitle('Delivery or pickup?')
     .setChoiceValues(['Delivery to the venue', 'Delivery to my home', 'Pickup']);
   form.addTextItem().setTitle('Delivery address and preferred time window');
 
   // ---- Section 4: A la carte ----
   var cartePage = form.addPageBreakItem().setTitle('A la carte wedding florals');
-  form.addCheckboxItem().setTitle('Which products would you like?')
-    .setChoiceValues([
+  form.addGridItem()
+    .setTitle('Which products would you like, and how many of each?')
+    .setHelpText('Choose 0 for anything you do not need.')
+    .setRows([
       'Bridal bouquet', 'Bridesmaid bouquets', 'Boutonnieres', 'Corsages', 'Flower crown',
       'Ceremony arrangements', 'Aisle florals', 'Reception centerpieces', 'Bud vases',
       'Cake flowers', 'Welcome sign florals'
     ])
-    .showOtherOption(true);
-  form.addParagraphTextItem().setTitle('Quantity for each item you chose');
+    .setColumns(['0', '1', '2', '3', '4', '5', '6-10', '11-20', '20+']);
+  form.addParagraphTextItem()
+    .setTitle('Anything else you need? Please list the item and quantity.');
   form.addTextItem().setTitle('Delivery or pickup? Address and preferred time window');
   form.addMultipleChoiceItem().setTitle('Do you need setup?')
     .setChoiceValues(['Yes', 'No', 'Not sure']);
