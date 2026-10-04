@@ -33,7 +33,7 @@ function createWeddingInquiryForm() {
   // ---- Section 2: Your wedding ----
   form.addPageBreakItem().setTitle('Your wedding');
   form.addDateItem().setTitle('Wedding date').setRequired(true);
-  form.addTextItem().setTitle('Ceremony and reception venue(s), with city').setRequired(true);
+  form.addTextItem().setTitle('Ceremony and reception venue(s) / city').setRequired(true);
   form.addMultipleChoiceItem().setTitle('Approximate guest count')
     .setChoiceValues(['Under 10', '10-25', '26-50', '51-100', '100+']);
   var pathQuestion = form.addMultipleChoiceItem()
