@@ -1772,3 +1772,22 @@ details.faq-item > ul { margin-bottom: 24px; }
 }
 
 .wedding-options .note-box { margin-top: 56px; }
+
+/* Compact category rows (events: what we cover) */
+.highlight.compact {
+  grid-template-columns: 300px 1fr;
+  gap: 36px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.highlight.compact:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.highlight.compact:nth-of-type(even) .highlight-media { order: 0; }
+.highlight.compact .highlight-copy h3 { font-size: 1.7rem; margin-bottom: 8px; }
+.highlight.compact .highlight-copy p { margin-bottom: 8px; }
+
+@media (max-width: 860px) {
+  .highlight.compact { grid-template-columns: 1fr; gap: 16px; }
+  .highlight.compact .highlight-media { max-width: 320px; }
+}
