@@ -19,7 +19,7 @@ const ORDER_LINKS = {
 
 // Google Form for wedding inquiries. Paste the form's public link between the quotes;
 // until then the wedding Inquire buttons open the Contact page.
-const WEDDING_FORM_URL = '';
+const WEDDING_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_d4JpGQuniAO8mTbsODlUPUH_HN207IwcfGbC4SslO44qDw/viewform';
 
 document.addEventListener('DOMContentLoaded', () => {
   /* Wedding inquiry links -> Google Form */
