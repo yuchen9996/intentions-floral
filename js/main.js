@@ -17,7 +17,20 @@ const ORDER_LINKS = {
   'designers-choice-250': ''
 };
 
+// Google Form for wedding inquiries. Paste the form's public link between the quotes;
+// until then the wedding Inquire buttons open the Contact page.
+const WEDDING_FORM_URL = '';
+
 document.addEventListener('DOMContentLoaded', () => {
+  /* Wedding inquiry links -> Google Form */
+  if (WEDDING_FORM_URL) {
+    document.querySelectorAll('[data-wedding-form]').forEach((link) => {
+      link.href = WEDDING_FORM_URL;
+      link.target = '_blank';
+      link.rel = 'noopener';
+    });
+  }
+
   /* Order buttons -> Square store */
   document.querySelectorAll('[data-order]').forEach((btn) => {
     const url = ORDER_LINKS[btn.dataset.order] || SQUARE_STORE_URL;
