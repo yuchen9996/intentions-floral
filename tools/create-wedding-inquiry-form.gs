@@ -27,7 +27,8 @@ function createWeddingInquiryForm() {
   form.addTextItem().setTitle('Phone number').setRequired(true);
   form.addTextItem().setTitle("Partner's name");
   form.addMultipleChoiceItem().setTitle('How did you hear about us?')
-    .setChoiceValues(['Instagram', 'Referral', 'Google', 'Other']);
+    .setChoiceValues(['Instagram', 'Referral', 'Google'])
+    .showOtherOption(true);
 
   // ---- Section 2: Your wedding ----
   form.addPageBreakItem().setTitle('Your wedding');
@@ -42,12 +43,14 @@ function createWeddingInquiryForm() {
   // ---- Section 3: Intimate / micro ----
   var microPage = form.addPageBreakItem().setTitle('Intimate and micro weddings');
   form.addMultipleChoiceItem().setTitle('What is your ceremony style?')
-    .setChoiceValues(['Courthouse', 'Outdoor', 'Venue', 'Home', 'Other']);
+    .setChoiceValues(['Courthouse', 'Outdoor', 'Venue', 'Backyard'])
+    .showOtherOption(true);
   form.addCheckboxItem().setTitle('Which flowers do you need?')
     .setChoiceValues([
       'Bridal bouquet', 'Bridesmaid bouquets', 'Boutonniere(s)', 'Corsage(s)',
-      'Ceremony arrangement', 'A few table pieces', 'Other'
-    ]);
+      'Ceremony arrangement', 'A few table pieces'
+    ])
+    .showOtherOption(true);
   form.addParagraphTextItem().setTitle('How many of each?');
   form.addMultipleChoiceItem().setTitle('Delivery or pickup?')
     .setChoiceValues(['Delivery to the venue', 'Delivery to my home', 'Pickup']);
@@ -59,8 +62,9 @@ function createWeddingInquiryForm() {
     .setChoiceValues([
       'Bridal bouquet', 'Bridesmaid bouquets', 'Boutonnieres', 'Corsages', 'Flower crown',
       'Ceremony arrangements', 'Aisle florals', 'Reception centerpieces', 'Bud vases',
-      'Cake flowers', 'Welcome sign florals', 'Other'
-    ]);
+      'Cake flowers', 'Welcome sign florals'
+    ])
+    .showOtherOption(true);
   form.addParagraphTextItem().setTitle('Quantity for each item you chose');
   form.addTextItem().setTitle('Delivery or pickup? Address and preferred time window');
   form.addMultipleChoiceItem().setTitle('Do you need setup?')
