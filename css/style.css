@@ -1810,3 +1810,11 @@ details.faq-item > ul { margin-bottom: 24px; }
 
 .highlight-media.stack img:first-child { top: 0; left: 0; z-index: 2; }
 .highlight-media.stack img:last-child { bottom: 0; right: 0; z-index: 1; }
+
+/* Homepage: compact text-only hero so the service cards sit near the top */
+.hero { padding: 36px 0 8px; }
+.hero .container { grid-template-columns: 1fr; gap: 0; }
+.hero h1 { margin-bottom: 0.3em; }
+.hero p { max-width: 560px; }
+.hero-actions { margin-top: 22px; }
+.hero + .services-preview { padding-top: 40px; }
