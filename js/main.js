@@ -27,7 +27,7 @@ const EVENT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScr5nX4I34Q_8t4
 
 // Contact page form delivery. Create a free form at formspree.io pointed at
 // hello@intentionsfloral.com and paste its endpoint (https://formspree.io/f/xxxxxxxx) here.
-const CONTACT_FORM_ENDPOINT = '';
+const CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/xeaeojrp';
 
 document.addEventListener('DOMContentLoaded', () => {
   /* Embedded Google Forms (events and weddings) */
