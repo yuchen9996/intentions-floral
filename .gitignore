@@ -6,3 +6,5 @@ images/originals/
 
 images/inbox/*
 !images/inbox/.gitkeep
+
+site-publish/
