@@ -1818,3 +1818,15 @@ details.faq-item > ul { margin-bottom: 24px; }
 .hero p { max-width: 560px; }
 .hero-actions { margin-top: 22px; }
 .hero + .services-preview { padding-top: 40px; }
+
+/* Embedded Google Form (events) */
+.form-embed { max-width: 760px; }
+.form-embed iframe {
+  width: 100%;
+  height: 1150px;
+  border: 0;
+  border-radius: var(--radius-img);
+  background: var(--color-paper);
+}
+.form-embed-fallback { color: var(--color-ink-soft); }
+@media (max-width: 860px) { .form-embed iframe { height: 1350px; } }

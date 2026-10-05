@@ -21,7 +21,22 @@ const ORDER_LINKS = {
 // until then the wedding Inquire buttons open the Contact page.
 const WEDDING_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_d4JpGQuniAO8mTbsODlUPUH_HN207IwcfGbC4SslO44qDw/viewform';
 
+// Google Form for event inquiries, embedded on the Events page. Paste the form's public
+// link (ending in /viewform) between the quotes; until then a link to the Contact page shows.
+const EVENT_FORM_URL = '';
+
 document.addEventListener('DOMContentLoaded', () => {
+  /* Event inquiry form embed */
+  const eventEmbed = document.querySelector('[data-event-form]');
+  if (eventEmbed && EVENT_FORM_URL) {
+    const frame = document.createElement('iframe');
+    frame.src = EVENT_FORM_URL + (EVENT_FORM_URL.includes('?') ? '&' : '?') + 'embedded=true';
+    frame.title = 'Event inquiry form';
+    frame.loading = 'lazy';
+    frame.setAttribute('frameborder', '0');
+    eventEmbed.replaceChildren(frame);
+  }
+
   /* Wedding inquiry links -> Google Form */
   if (WEDDING_FORM_URL) {
     document.querySelectorAll('[data-wedding-form]').forEach((link) => {
