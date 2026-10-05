@@ -25,6 +25,10 @@ const WEDDING_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_d4JpGQuniA
 // link (ending in /viewform) between the quotes; until then a link to the Contact page shows.
 const EVENT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScr5nX4I34Q_8t4xG7BP9bRqlj49IFYPpdeRJ00lAuUsvYTaQ/viewform';
 
+// Contact page form delivery. Create a free form at formspree.io pointed at
+// hello@intentionsfloral.com and paste its endpoint (https://formspree.io/f/xxxxxxxx) here.
+const CONTACT_FORM_ENDPOINT = '';
+
 document.addEventListener('DOMContentLoaded', () => {
   /* Embedded Google Forms (events and weddings) */
   const embedForm = (el, url, title) => {
@@ -129,7 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
       eventType.value = 'Order: ' + occasion;
     }
 
-    contactForm.addEventListener('submit', (e) => {
+    const formError = document.querySelector('.form-error');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    const showError = (message) => {
+      if (formSuccess) formSuccess.classList.remove('visible');
+      if (formError) {
+        formError.textContent = message;
+        formError.classList.add('visible');
+      }
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       if (!contactForm.checkValidity()) {
@@ -137,10 +152,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      if (formSuccess) {
-        formSuccess.classList.add('visible');
+      if (formError) formError.classList.remove('visible');
+
+      if (!CONTACT_FORM_ENDPOINT) {
+        showError('Our online form is not connected yet. Please email hello@intentionsfloral.com or text (917) 200-0466.');
+        return;
       }
-      contactForm.reset();
+
+      submitBtn.disabled = true;
+      try {
+        const response = await fetch(CONTACT_FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if (!response.ok) throw new Error('Request failed');
+        if (formSuccess) formSuccess.classList.add('visible');
+        contactForm.reset();
+      } catch (err) {
+        showError('Sorry, something went wrong. Please email hello@intentionsfloral.com or text (917) 200-0466.');
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
   }
 });
