@@ -23,7 +23,7 @@ const WEDDING_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_d4JpGQuniA
 
 // Google Form for event inquiries, embedded on the Events page. Paste the form's public
 // link (ending in /viewform) between the quotes; until then a link to the Contact page shows.
-const EVENT_FORM_URL = '';
+const EVENT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScr5nX4I34Q_8t4xG7BP9bRqlj49IFYPpdeRJ00lAuUsvYTaQ/viewform';
 
 document.addEventListener('DOMContentLoaded', () => {
   /* Event inquiry form embed */
