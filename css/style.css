@@ -1850,3 +1850,7 @@ details.faq-item > ul { margin-bottom: 24px; }
   max-width: 820px;
   margin: 0 auto;
 }
+
+/* The Knot badge in the footer */
+.knot-badge { display: inline-block; margin-top: 18px; }
+.knot-badge img { width: 120px; height: auto; display: block; }
