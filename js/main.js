@@ -1,16 +1,16 @@
 // Intentions — Floral Design Studio
 // Shared front-end behaviour: mobile nav, active link, gallery filter, contact form.
 
-// Square store links for the "Order" buttons. Set SQUARE_STORE_URL to your store address
-// (e.g. 'https://shop.intentionsfloral.com'), and optionally give an item its own link
-// in ORDER_LINKS. Any button left without a link falls back to the Contact page.
-const SQUARE_STORE_URL = '';
+// Order buttons on the Bouquets, Vase Arrangements, and Designer's Choice pages.
+// By default every button opens the Order Request Google Form. To send an item to its own
+// Square product page instead, paste that page's address next to its name in ORDER_LINKS.
+const ORDER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSegWQCOs_PD4yULN6FssnplCq6m6Escp3UDTFjKuC7OqByGgg/viewform';
 const ORDER_LINKS = {
   'petite-bouquet': '',
   'signature-bouquet': '',
   'grand-bouquet': '',
   'petite-vase': '',
-  'signature-vase': 'https://square.link/u/GZQKEHPI',
+  'signature-vase': '',
   'grand-vase': '',
   'designers-choice-75': '',
   'designers-choice-150': '',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Order buttons -> Square store */
   document.querySelectorAll('[data-order]').forEach((btn) => {
-    const url = ORDER_LINKS[btn.dataset.order] || SQUARE_STORE_URL;
+    const url = ORDER_LINKS[btn.dataset.order] || ORDER_FORM_URL;
     if (url) {
       btn.href = url;
       btn.target = '_blank';
