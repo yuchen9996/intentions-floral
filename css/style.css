@@ -1854,3 +1854,37 @@ details.faq-item > ul { margin-bottom: 24px; }
 /* The Knot badge in the footer */
 .knot-badge { display: inline-block; margin-top: 18px; }
 .knot-badge img { width: 120px; height: auto; display: block; }
+
+/* Homepage hero: Instagram and The Knot on the right */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.hero-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+
+.hero-ig:hover { color: var(--color-terracotta); }
+.hero-knot img { display: block; width: 130px; height: 130px; }
+
+@media (max-width: 860px) {
+  .hero-social { gap: 20px; margin-top: 8px; }
+  .hero-knot img { width: 96px; height: 96px; }
+}
