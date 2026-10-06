@@ -17,10 +17,6 @@ const ORDER_LINKS = {
   'designers-choice-250': ''
 };
 
-// Google Form for wedding inquiries, embedded on the Weddings page. Paste the form's public
-// link (ending in /viewform) between the quotes.
-const WEDDING_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_d4JpGQuniAO8mTbsODlUPUH_HN207IwcfGbC4SslO44qDw/viewform';
-
 // Google Form for event inquiries, embedded on the Events page. Paste the form's public
 // link (ending in /viewform) between the quotes; until then a link to the Contact page shows.
 const EVENT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScr5nX4I34Q_8t4xG7BP9bRqlj49IFYPpdeRJ00lAuUsvYTaQ/viewform';
@@ -40,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     frame.setAttribute('frameborder', '0');
     el.replaceChildren(frame);
   };
-  embedForm(document.querySelector('[data-event-form]'), EVENT_FORM_URL, 'Event inquiry form');
-  embedForm(document.querySelector('[data-wedding-form-embed]'), WEDDING_FORM_URL, 'Wedding inquiry form');
+  embedForm(document.querySelector('[data-event-form]'), EVENT_FORM_URL, 'Event inquiry form');
 
   /* Order buttons -> Square store */
   document.querySelectorAll('[data-order]').forEach((btn) => {
