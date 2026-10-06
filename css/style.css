@@ -1843,3 +1843,10 @@ details.faq-item > ul { margin-bottom: 24px; }
 }
 
 .form-error.visible { display: block; }
+
+/* About page without the founder photo: single readable column */
+.about-grid.about-solo {
+  grid-template-columns: 1fr;
+  max-width: 820px;
+  margin: 0 auto;
+}
